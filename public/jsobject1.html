@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    
+    <script>
+        var product=[{name:"Earphone",price:1500,photo:"assets/earphone.jpg"},
+        {name:"Mobile",price:110000,photo:"assets/mobile.jpg"},
+        {name:"Laptop",price:12500,photo:"assets/laptop.jpg"}];
+        function onLoad(){
+            for(var value of product){
+                var tr=document.createElement("tr");
+                var tdName=document.createElement("td");
+                var tdPrice=document.createElement("td");
+                var tdPhoto=document.createElement("td");
+                var photo=document.createElement("img");
+                tdName.innerHTML=value.name;
+                tdPrice.innerHTML=value.price;
+                photo.src=value.photo;
+                photo.height="100";
+                photo.width="100";
+                tdPhoto.appendChild(photo);
+                tr.appendChild(tdName);
+                tr.appendChild(tdPrice);
+                tr.appendChild(tdPhoto);
+                document.querySelector("tbody").appendChild(tr);
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="onLoad()">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Preview</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script>
+        var arr=[];
+        arr[0]=65;
+        arr["1"]="Name";
+        arr[5]="Sohan";
+        document.write(`${arr.toString()}<br>`);
+        document.write(arr.join("==>"));
+        var brr=[23000,65000,76000,45000];
+        document.write("<br>");
+        document.write(brr.filter(function(value){return value>50000}));
+        document.write("<br>");
+        document.write(brr.find(function(value){return value>50000}));
+        brr.map(function(value){
+            document.write(`<li>${value}</li>`)
+        });
+        for (var properties in arr) {
+            document.write(`${properties}==>property<br>`);
+        }
+        document.write("<br>");
+        for (var properties of arr) {
+            document.write(`${properties}==>property<br>`);
+        }
+        document.write("<br>");
+        for (var properties of brr) {
+            document.write(`${properties}==>property<br>`);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

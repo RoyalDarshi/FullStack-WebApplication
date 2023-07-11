@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Amazon Login</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="shortcut icons" href="assets/favicon.ico">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src='main.js'></script>
+    <style>
+        #item{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;            
+        }
+        #container{
+            width: 400px;
+            height: 300px;            
+            margin-top: 20px;
+        }
+        body{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        h1{
+            text-align: center;
+        }
+        input,button{
+            margin: 10px;
+            width: 100%;
+        }
+        h3,p{
+            margin: 10px;
+        }
+        #footer{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+            color: rgb(222, 74, 48);
+        }
+        p{
+            font-size: 14px;
+        }
+        #para{
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="container">
+    <div><h1>Amazon</h1></div>
+    <div id="container">        
+        <div id="item" class="input-group-s">
+            <h3>Sign in</h3>
+            <form action="">
+                <b><p>Email or mobile phone number</p></b>
+                <input type="text" class="form-control">
+                <button class="btn btn-warning">Continue</button>
+            </form>
+            <p>By continuing, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.</p>
+            <form action="">
+                <select value="dropdown">
+                    <option name="drop" id=""><a>Need help ?</a></option>
+                    <option name="drop" id=""><a>Forgot password</a></option>
+                    <option name="drop" id=""><a>Athore issue with Sign in</a></option>
+                    
+                </select>
+            </form>
+            <p id="para">New to amazon ?</p>
+            <button class="btn  btn-light">Create your Amazon account</button>
+        </div>
+        <div id="footer" class="input-group-s">
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    
+    <script>
+        var product=[{name:"Earphone",price:1500,photo:"assets/earphone.jpg"},
+        {name:"Mobile",price:110000,photo:"assets/mobile.jpg"},
+        {name:"Watch",price:2500,photo:"assets/watch.jpg"},
+        {name:"Laptop",price:12500,photo:"assets/laptop.jpg"}];
+        function onLoad(){
+            for(var value of product){
+                var card=document.createElement("div");
+                card.className="card w-25 m-2 p-2";
+                card.innerHTML=`
+                    <img src=${value.photo} height="200" class="card-img-top" alt="no image" >                        
+                    <div class="card-header">
+                        <h2>${value.name}</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>&#8377;${value.price}</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-danger w-100"><span class="bi bi-cart4"></span>Add to cart</button>
+                    </div>                    
+                `;
+                document.querySelector("div").appendChild(card);
+            }
+        }
+    </script>
+</head>
+<body onload="onLoad()" class="container-fluid">
+    <div class="d-flex flex-wrap justify-content-between">
+
+    </div>
+</body>
+</html>

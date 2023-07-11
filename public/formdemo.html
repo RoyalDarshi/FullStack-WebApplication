@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Form Demo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src='main.js'></script>
+    <style>
+        #terms{
+            width: 400px;
+            height: 150px;
+            border: 2px black;
+            overflow: auto;
+            margin-left: 40px;
+        }
+        h2{
+            margin-left: 60px;
+        }
+        #input{
+            margin-left: 40px;
+        }
+        #accept~span{
+            margin-left: 10px;
+            color: red;
+        }
+        #accept:checked~span{
+            color: green;
+        }
+    </style>
+
+</head>
+<body>
+    <h2>Terms and condition</h2>
+    <div id="terms">
+        <p>Compose infrastructure as code in a Terraform file using HCL to provision resources from any infrastructure provider. Build. Infrastructure automation workflow used to compose, collaborate, reuse, and provision infrastructure as code across IT operations and teams of developers. Standardize. Establish guardrails for security, compliance, and cost </p>
+    </div>
+    <div id="input" class="form-switch">
+        <input id="accept" type="checkbox" class="form-check-input"><span>I Accept</span>
+    </div>
+</body>
+</html>

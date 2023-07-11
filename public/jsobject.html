@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script>
+        let product={
+            "name":"",
+            "price":0,
+            "stock":false,
+            "Qty":0,
+            "Cities":[],
+            "Rating":{"Rate":0.0,"Count":0},
+            "Total":function(){
+                return this.Qty*this.price;
+            },
+            "Print":function(){
+                document.write(`Name=${this.name}<br>Price=${this.price}<br>Stock=${this.stock}<br>Qty=${this.Qty}<br>
+                Cities=${this.Cities}<br>Rating=${this.Rating.Rate}  by No of people=${this.Rating.Count}<br> Total=${this.Total()}`);
+            }
+        }
+        product.name="Samsung TV";
+        product.price=56000;
+        product.stock=true;
+        product.Qty=3;
+        product.Cities=["Delhi","Hyderabad"];
+        product.Rating.Rate=4.7;
+        product.Rating.Count=500;
+        product.Print();        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

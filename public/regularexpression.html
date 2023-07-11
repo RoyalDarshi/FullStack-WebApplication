@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Regular Expression</title>
+    <link rel="stylesheet" href="assets/favicon.ico">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+       body{
+        display: flex;
+        justify-content: center;
+       }
+       #container{
+        height: 600px;
+        display: flex;
+        align-items: center;
+        
+       }
+    </style>
+</head>
+<body class="container">
+    <div id="container">
+        <div id="item">
+            <form action="" class="input-group input-group-lg">
+                <input type="text" class="form-control" pattern="(?=.*[!@#$%])\w[!@#$%]{4,15}" name="userName1" placeholder="Your text here">
+                <button class="btn btn-danger" type="submit">
+                Get Started <span class="bi bi-chevron-right"></span>
+            </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

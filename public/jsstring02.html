@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeColor(){
+            document.getElementById("title").innerHTML="Welcome to JavaScript".fontcolor(document.getElementById("opt").value);
+        }
+    </script>
+</head>
+<body>
+    <select name="form" id="opt" onchange="changeColor()">
+        <option value="black" selected>black</option>
+        <option value="green">green</option>
+        <option value="red">red</option>
+        <option value="yellow">yellow</option>
+        <option value="blue">blue</option>
+    </select>
+    <h3 id="title">Welcome to JavaScript</h3>
+</body>
+</html>

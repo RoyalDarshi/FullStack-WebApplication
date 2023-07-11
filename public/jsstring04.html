@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkLetter(){
+            
+            var str=document.getElementById("textbox").value;
+            if(str.charCodeAt(0)<65||str.charCodeAt(0)>90){
+                document.querySelector("p").innerHTML="First letter must be captail".fontcolor('red');
+            }
+            else{
+                document.querySelector("p").innerHTML="";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>Enter Your Name</h3>
+    <input type="text" name="" id="textbox" onkeyup="checkLetter()">
+    <p></p>
+</body>
+</html>

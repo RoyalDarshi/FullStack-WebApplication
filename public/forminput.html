@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Form Input</title>
+    <script>
+        function getInput(){
+            document.getElementById("prodDetail").style.display="block";
+            document.getElementById("register").style.display="none";
+            document.getElementById("edit").style.display="block";
+            document.getElementById("lblProdName").innerHTML=document.getElementById("prodName").value;
+            document.getElementById("lblPrice").innerHTML=document.getElementById("price").value;
+            document.getElementById("lblCity").innerHTML=document.getElementById("city").value;
+            stock="";
+            if(document.getElementById("stock").checked){
+                stock="Available";
+            }
+            else{
+                stock="Not Available";
+            }
+            document.getElementById("lblStock").innerHTML=stock;
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <button class="btn btn-primary mt-2" id="register" data-bs-toggle="modal" data-bs-target="#registerInput">Register</button>
+    <div class="modal fade" id="registerInput">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Register Form</h2>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl>Product Name</dl>
+                    <dd><input type="text" class="form-control" id="prodName"></dd>
+                    <dl>Price</dl>
+                    <dd><input type="number" class="form-control" name="" id="price"></dd>
+                    <dl>Shipped to</dl>
+                    <dd >
+                        <select name="" id="city" class="form-select">
+                            <option value="Delhi" selected>Delhi</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                        </select>
+                    </dd>
+                    <dl>Stock</dl>
+                    <dd class="form-switch">
+                        <input type="checkbox" id="stock" class="form-check-input">Available
+                    </dd>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" onclick="getInput()" data-bs-dismiss="modal">Register</button>
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="mt-3" id="prodDetail" style="display: none;">
+        <h2>Product Details</h2>
+        <dl class="row">
+            <dt class="col-3">Product Name: </dt>
+            <dd class="col-9" id="lblProdName"></dd>
+            <dt class="col-3">Price: </dt>
+            <dd class="col-9" id="lblPrice"></dd>
+            <dt class="col-3">Shipped to: </dt>
+            <dd class="col-9" id="lblCity"></dd>
+            <dt class="col-3">Stock: </dt>
+            <dd class="col-9" id="lblStock"></dd>
+        </dl>
+    </div>
+    <div style="display: none;" id="edit">
+        <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#registerInput">Edit</button>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

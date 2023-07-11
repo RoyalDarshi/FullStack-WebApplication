@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src='main.js'></script>
+    <script>
+        var city=["delhi","hyderabad"];
+        function onLOad(){
+            city.sort();
+            for(var value of city){                
+                var option=document.createElement("option");
+                option.text=value;
+                document.querySelector("select").appendChild(option);
+            }
+        }
+        function addClick(){
+            var inputCity=document.querySelector("input").value;
+            if(inputCity==""){
+                var p=document.querySelector("p");
+                p.innerHTML="City name can not be empty!";
+                p.className="text-danger m-2"
+                document.querySelector("input").className="border border-3 border-danger form-control p-2";
+            }
+            else{
+                document.querySelector("p").innerHTML="";
+                document.querySelector("input").className="form-control p-2";
+                var inputCityIndex=city.indexOf(inputCity.toLowerCase());
+                if(inputCityIndex==-1){
+                    city.push(inputCity.toLowerCase());
+                    document.querySelector("select").innerHTML="";
+                    onLOad();
+                    alert("City added!");                    
+                }
+                else{
+                    var p=document.querySelector("p");
+                    p.innerHTML="City already existed!";
+                    p.className="text-danger m-2"
+                    document.querySelector("input").className="border border-3 border-danger form-control p-2";
+                }  
+                document.querySelector("input").value="";              
+            }
+        }
+        function deleteClick(){
+            var selectCity=document.querySelector("select").value;
+            var cityIndex=city.indexOf(selectCity);
+            city.splice(cityIndex,1);
+            document.querySelector("select").innerHTML="";
+            onLOad();
+            alert("City Removed");
+        }
+        function decoration(){
+            document.querySelector("input").className="form-control p-2";
+            document.querySelector("p").innerHTML="";
+        }
+    </script>
+</head>
+<body onload="onLOad()" class="container-fluid row">
+    <div class="col">
+        <h2>&nbsp;</h2>
+        <div class="d-flex input-group">
+        <input type="text" class="form-control p-2" name="city" id="input">
+        <button class="btn btn-primary w-25" onblur="decoration()" onclick="addClick()" id="addCity">Add City</button>
+        </div>
+        <p></p>
+    </div>
+
+    <div class="col">
+        <div class="d-block">
+            <h2 class="text-center w-75">City Name</h2>
+        </div>
+        <div class="input-group">
+            <select  id="select" class="form-select p-2 w-50 text-capitalize"></select>
+            <button class="btn btn-danger" onclick="deleteClick()">Remove City</button>
+        </div>
+    </div>
+</body>
+</html>

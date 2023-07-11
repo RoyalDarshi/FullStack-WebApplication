@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Dom Hierarchy</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">    
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script>
+        function printData(){
+          total=document.getElementsByTagName("h2")
+          alert("Total No of h2: "+total.length)
+        }
+    </script>
+</head>
+<body onload="printData()">
+    <fieldset>
+        <legend>Paymant Method</legend>
+        <input type="radio" class="form-check-input" name="pay">Cash
+        <input type="radio" class="form-check-input" name="pay" id="">UPI
+        <input type="radio" name="pay" id="">Credit Card
+    </fieldset>
+</body>
+</html>

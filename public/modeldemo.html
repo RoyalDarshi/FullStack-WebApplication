@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Model Demo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <h2>Model</h2>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modelregistration">Register</button>
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginmodal">Login</button>
+    </div>
+    <div class="modal fade" id="modelregistration">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Registration Form</h2>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl>
+                        <dt>Name</dt>
+                        <dd><input type="text"></dd>
+                    </dl>
+                    <dl>
+                        <dt>Age</dt>
+                        <dd><input type="number"></dd>
+                    </dl>
+                    <dl>
+                        <dt>Email</dt>
+                        <dd><input type="email"></dd>
+                    </dl>
+                    <dl>
+                        <dt>Password</dt>
+                        <dd><input type="password"></dd>
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Register</button>
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="loginmodal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">                
+                <div class="modal-header">
+                    <h2 class="modal-title">Login Form</h2>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl>
+                        <dt>UserName</dt>
+                        <dd><input type="text"></dd>
+                        <dt>Password</dt>
+                        <dd><input type="password"></dd>
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success">Login</button>
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

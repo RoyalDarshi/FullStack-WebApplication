@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Inter Document Link</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="assets/favicon.ico">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+        }
+        .container iframe{
+            height: 600px;
+            width: 100%;
+            border: none;
+        }
+        li{
+            list-style: none;
+            padding: 15px;
+            font-size: 18px;
+            width: 250px;
+            background-color: green;
+            margin-bottom: 15px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            
+        }
+        a:active{
+            color: red;
+        }
+        li:hover{
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+        <div>
+            <ol>
+                <li><a href="https://www.amazon.in">Amazon Shopping</a></li>
+                <li><a href="navbar.html" target="framebody">NavBar</a></li>
+                <li><a href="assets/shoes.jpg" target="framebody">Shoes</a></li>
+                <li><a href="mailto:priyadarshiroy92@gmail.com" target="framebody">Priyadarshi Roy</a></li>
+                <li><a href="call:+918982127516" target="framebody">8982127516</a></li>
+            </ol>
+        </div>
+        <div>
+            <iframe name="framebody"></iframe>
+        </div>
+   </div>
+</body>
+</html>

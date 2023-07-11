@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function bodyLoad(){
+            fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY")
+            .then(function(response){return response.json();})
+            .then(function(data){
+                for(var item of data.photos){
+                    var tdId=document.createElement("td");
+                    var tdCameraName=document.createElement("td");
+                    var tdPhoto=document.createElement("td");
+                    var tdRovername=document.createElement("td");
+                    tdId.innerHTML=item.id;
+                    tdCameraName.innerHTML=item.camera.full_name;
+                    var image=document.createElement("img");
+                    image.src=item.img_src;
+                    image.height="200";
+                    image.width="200";
+                    tdPhoto.appendChild(image);
+                    tdRovername.innerHTML=item.rover.name;
+                    var tr=document.createElement("tr");
+                    tr.appendChild(tdId);
+                    tr.appendChild(tdCameraName);
+                    tr.appendChild(tdPhoto);
+                    tr.appendChild(tdRovername);
+                    document.querySelector("tbody").appendChild(tr);
+                }
+            });
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Photo ID</th>
+                <th>Camera Name</th>
+                <th>Photo</th>
+                <th>Rover Name</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+</html>

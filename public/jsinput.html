@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>JavaScript Input</title>
+    <script>
+        function createFolder(){
+            folderName=prompt("Enter FolderName","New Folder");
+            if(folderName==""){
+                document.write("Please provide folder name!");
+            }
+            else if(folderName==null){
+                document.write("You cancelled!");
+            }
+            else{
+                document.querySelector("p").innerHTML="Folder created with name: "+folderName;
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <button class="btn btn-primary mt-2" onclick=createFolder()>Create Folder</button>
+    <p></p>
+</body>
+</html>

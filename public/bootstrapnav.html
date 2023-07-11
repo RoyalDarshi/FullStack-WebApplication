@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Nav</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body class="container-fluid">
+    <h1>Product Info</h1>
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#details">Basic Detail</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#preview">Preview</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#description">Description</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane show active" id="details">
+            <h2>Bsic Details</h2>
+            <dl>
+                <dt>Name</dt>
+                <dd>Boat Headset</dd>
+                <dt>Price</dt>
+                <dd>1500</dd>                
+            </dl>
+        </div>
+        <div class="tab-pane show" id="preview">
+            <h2>Preview</h2>
+            <img src="assets/earphone.jpg" alt="" width="200px" height="200px">
+        </div>
+        <div class="tab-pane show" id="description">
+            <h2>Description</h2>
+            <p>Something about Neckband</p>
+        </div>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

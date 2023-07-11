@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function onLoad(){
+            var pic=["assets/earphone.jpg","assets/speaker.jpg","assets/shoes.jpg","assets/shirt.jpg"];
+            for(var value of pic){
+                var image=document.createElement("img");
+                image.src=value;
+                image.height="200";
+                image.width="200";
+                document.getElementById("image").appendChild(image);
+                var opt=document.createElement("option");
+                opt.text=value;
+                document.getElementById("slct").appendChild(opt);
+                var list=document.createElement("li");
+                list.innerHTML=value;
+                document.getElementById("ols").appendChild(list);
+            }
+        }
+    </script>
+</head>
+<body onload="onLoad()">
+    <div id="image">
+
+    </div>
+    <div id="option">
+        <select name="" id="slct">
+        </select>
+    </div>
+    <div>
+        <ol id="ols">
+
+        </ol>
+    </div>
+</body>
+</html>

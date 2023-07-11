@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Intra Links</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        ul{
+            list-style: none;
+            display: flex;
+        }
+        .topic{
+            border: 2px solid black;
+            padding: 20px;
+            margin: 20px;
+        }
+        .topic:target{
+            color: white;
+            background-color: black;
+        }
+        .topic:hover{
+            background-color: yellow;
+            color: red;
+        }
+        li{
+            font-size: 20px;
+            margin-right: 20px;
+            margin: 10px;
+        }
+        a{
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            background-color: maroon;
+            padding: 20px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#css">CSS</a></li>
+            <li><a href="#js">JS</a></li>
+        </ul>
+    </div>
+    <div class="topic" id="html">
+        <h2>HTML</h2>
+        <p>It is a markup language</p>
+    </div>
+    <div class="topic" id="css">
+        <h2>CSS</h2>
+        <p>It defines styles for html</p>
+    </div>
+    <div class="topic" id="js">
+        <h2>JS</h2>
+        <p>It is a language for handling client interaction.</p>
+    </div>
+</body>
+</html>

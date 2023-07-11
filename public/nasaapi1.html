@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function bodyLoad(){
+            fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY")
+            .then(function(property){return property.json()})
+            .then(function(data){
+                for(var item of data.photos){
+                    var card=document.createElement("div");
+                    card.className="card m-2 p-2";
+                    card.style.width="320px";
+                    card.innerHTML=`
+                        <img src=${item.img_src} height="200" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h2>${item.camera.full_name}</h2>
+                            <p>${item.id}</p>    
+                        </div>
+                        <div class="card-footer text-center">
+                            <p>${item.rover.name}</p>    
+                        </div>
+                    `;
+                    document.querySelector("div").appendChild(card);
+                }
+            });
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyLoad()">
+    <h2 class="text-center">Marse Rover Pic</h2>
+    <div class="d-flex flex-wrap justify-content-between">
+
+    </div>
+</body>
+</html>

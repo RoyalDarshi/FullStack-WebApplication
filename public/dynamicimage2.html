@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Document</title>
+    <script>
+        var categories = ["Electronics", "Footwear", "Fashion"];
+        function onLoad(){
+            for(var value of categories){
+            var option=document.createElement("option");
+            option.text=value;
+            document.querySelector("select").appendChild(option);
+            var li=document.createElement("li");
+            li.innerHTML=value;
+            document.querySelector("ol").appendChild(li);
+            var tr=document.createElement("tr");
+            var td=document.createElement("td");
+            td.innerHTML=value;
+            tr.appendChild(td);
+            document.querySelector("tbody").appendChild(tr);
+            }
+        }
+    </script>
+</head>
+<body onload="onLoad()">
+    <div class="row">
+        <div class="col">
+            <select class="form-select"></select>
+        </div>
+        <div class="col">
+            <ol></ol>
+        </div>
+        <div class="col me-4">
+            <table class="table table-hover table-dark text-center table-striped">
+                <thead>
+                    <tr>
+                        <th>Categories</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

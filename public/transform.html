@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Transform Demo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 600px;
+        }
+        img{
+            height: 200px;
+            width: 200px;
+            opacity: 0.5;
+            transition: 1s;
+            border: 2px solid black;
+            box-shadow: 2px 3px 3px black;
+            transition-timing-function: ease-in;
+        }
+        img:hover{
+            opacity: 1;
+            border: 2px solid red;
+            transition-timing-function: ease-out;
+            box-shadow: 2px 3px 3px red;
+            transform: scale(1.5);
+            transition: 1.4s;
+        }
+    </style>
+</head>
+<body>
+    <img src="assets/earphone.jpg" alt="">
+</body>
+</html>

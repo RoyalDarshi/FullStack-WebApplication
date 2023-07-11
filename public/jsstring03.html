@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        #form{
+            width: 300px;
+            border: 2px solid black;
+            margin: 5px;
+            padding: 10px;
+        }
+        .light-theme{
+            width: 300px;
+            border: 2px solid black;
+            margin: 5px;
+            background-color: white;
+            color: black;
+            padding: 10px;
+        }
+        .dark-theme{
+            width: 300px;
+            border: 2px solid black;
+            margin: 5px;
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function darkTheme(){
+            if(document.getElementById("check").checked){
+                document.getElementById("form").className="dark-theme text-center";
+                document.querySelector("button").className="btn btn-secondary w-100";
+            }
+            else{
+                document.getElementById("form").className="light-theme text-center";
+                document.querySelector("button").className="btn btn-primary w-100";
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid text-center">
+    <div id="form">
+        <div class="form-switch">
+            <input type="checkbox" class="form-check-input" name="" id="check" onchange="darkTheme()"> Dark Theme
+        </div>
+        <h2>Form Login</h2>
+        <dl>
+            <dt>UserName</dt>
+            <dd><input type="text" class="form-control"></dd>
+            <dt>Pasword</dt>
+            <dd><input type="password" class="form-control" name="" id=""></dd>
+        </dl>
+        <button class="btn btn-primary w-100">Login</button>
+    </div>
+</body>
+</html>

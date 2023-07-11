@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        var data = [
+                {Category: "Electronics", Products: ["TV", "Mobile"]},
+                {Category: "Footwear", Products: ["Nike Casuals", "Lee Boot"]}
+            ];
+        function onLoad(){
+            for(var value of data){                
+                var outerli=document.createElement("li");
+                outerli.innerHTML=value.Category;
+                for(var product of value.Products){
+                    var ul=document.createElement("ul");
+                    var innerli=document.createElement("li");
+                    innerli.innerHTML=product;
+                    ul.appendChild(innerli);
+                    outerli.appendChild(ul);
+                }
+                document.querySelector("ol").appendChild(outerli);
+            }
+        }
+    </script>
+</head>
+<body onload="onLoad()">
+    <ol>
+
+    </ol>
+</body>
+</html>
